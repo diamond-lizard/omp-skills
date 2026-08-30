@@ -2,7 +2,7 @@
 
 A pack of five skills for the omp (oh my pi) harness, installed as one self-managed directory at `~/.omp/agent/skills/omp-skills/`.
 
-This README is written to be executed by an LLM inside an omp session: point your agent at this repo (a local directory path or a git URL) and ask it to install. The install is a copy: the source repo may be deleted afterward.
+This README is written to be executed by an LLM inside an omp session: point your agent at this repo (a local directory path or a git URL) and ask it to install. The install is a copy.
 
 ## What this is
 
@@ -29,7 +29,6 @@ The procedure takes a single input, **SOURCE**: a local directory path to this r
 4. **Reconcile deletions.** Remove any directory under the managed directory that is not one of the five skills present in the source tree. This is a reconcile (copy in, overwrite, delete stale), not a blind copy. The managed directory is wholly owned by this procedure, so reconciling inside it is always safe; never touch `~/.omp/agent/skills/` outside the managed directory.
 5. **Register the settings entry.** Read `~/.omp/agent/config.yml` (the omp user settings file for the active profile; create it if missing) and ensure the `skills.customDirectories` setting contains `~/.omp/agent/skills/omp-skills`. Merge into any existing `skills` block; never remove or reorder other entries. Check before writing: if the entry is already present, change nothing. The tilde form is fine (omp expands tilde when scanning custom directories).
 6. **Verify.** Each of the five directories under the managed directory contains a `SKILL.md`; the settings entry is present. Report the installed skill names (wayfinder, grilling, domain-modeling, research, prototype) and remind the user that omp discovers skills at session start, so they should start a fresh omp session (or restart the current one) for the skills to appear.
-7. **Cleanup.** After a successful install, the source (temporary clone or local copy) may be deleted; nothing references it afterward.
 
 ## Update
 
