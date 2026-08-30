@@ -47,3 +47,7 @@ Identical procedure to install: full reconciliation under the managed directory 
 ## Invocation
 
 In omp, invoke a skill by name: `/skill:<name>` (for example `/skill:wayfinder`). Skills are installed to `~/.omp/agent/skills/omp-skills/`.
+
+## Credits
+
+These skills are inspired by and adapted from [mattpocock/skills](https://github.com/mattpocock/skills), reworked for the omp harness and the rhizome-mcp issue tracker.
