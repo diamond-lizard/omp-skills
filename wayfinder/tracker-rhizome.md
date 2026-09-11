@@ -46,7 +46,7 @@ A `task` or `bug` with `parent_issue_id` set to the map, created with status `re
 
 ### Claim
 
-`claim_issue` with a lease of up to 3600 seconds is the session's first write on a ticket: claim before any work, so concurrent sessions skip it.
+`claim_issue` with a lease of up to 3600 seconds is the session's first write on a ticket: claim before any work, so concurrent sessions skip it. When the user's instruction to work on an issue arrives, treat it as standing authorization for any legitimate pre-claim transitions (e.g. `open`→`ready`) via supported tools — no separate confirmation round-trip; the state check and claim-before-content order still apply.
 
 - Renew the lease on every wake-up (human reply, subagent return, user answer) via `renew_attempt`.
 - Append a progress note via `save_attempt_note` after every significant finding; checkpoints seed recovery for a successor attempt.
@@ -64,7 +64,7 @@ Post the answer with `add_comment`, then `finish_attempt` with outcome `complete
 
 ### Context pointers
 
-Assets created while resolving a ticket (prototype artifacts, research notes and branches, specs) are recorded as a comment on the resolving ticket: branch name, path, or URL, whichever points at the asset.
+Assets created while resolving a ticket are recorded as a comment on the resolving ticket: prototype artifacts, research notes — a repo file path, per the findings convention — and specs; branch name, path, or URL, whichever points at the asset. Committing a findings file during planning touches the user's working repo: report the commit explicitly, and ask first when the destination branch or location is ambiguous.
 
 ## Map maintenance
 
