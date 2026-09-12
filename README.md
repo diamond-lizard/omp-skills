@@ -30,4 +30,4 @@ In omp, invoke a skill by name: `/skill:<name>` (for example `/skill:wayfinder`)
 
 ## Credits
 
-These skills are inspired by and adapted from [mattpocock/skills](https://github.com/mattpocock/skills), reworked for the omp harness and the rhizome-mcp issue tracker.
+Many of these skills were inspired by or adopted from other sources.  See [docs/credits.md](docs/credits.md) for details.
