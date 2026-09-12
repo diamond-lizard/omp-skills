@@ -30,4 +30,4 @@ In omp, invoke a skill by name: `/skill:<name>` (for example `/skill:wayfinder`)
 
 ## Credits
 
-Many of these skills were inspired by or adopted from other sources.  See [docs/credits.md](docs/credits.md) for details.
+Many of these skills were inspired by or adapted from other sources.  See [docs/credits.md](docs/credits.md) for details.
