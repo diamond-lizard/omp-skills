@@ -1,10 +1,10 @@
 # omp-skills
 
-A pack of six skills for the omp (oh my pi) harness, installed as one self-managed directory at `~/.omp/agent/skills/omp-skills/`.
+A pack of various skills for the omp (oh my pi) harness, installed as one self-managed directory at `~/.omp/agent/skills/omp-skills/`.
 
 ## What this is
 
-Six skills:
+Various skills:
 
 - **wayfinder**: plan a huge chunk of work (more than one agent session can hold) as a shared map of decision tickets on your issue tracker, and resolve them one at a time until the way to the destination is clear. Requires rhizome-mcp.
 - **grilling**: grill the user relentlessly about a plan, decision, or idea; stress-test their thinking.
@@ -12,12 +12,13 @@ Six skills:
 - **grill-with-docs**: a grilling interview whose resolutions are captured as they settle — glossary entries and ADRs written during the conversation, not after. Runs grilling and domain-modeling together; invoke it by name when you want capture, plain grilling when you don't.
 - **research**: investigate a question against high-trust primary sources and capture the findings as a Markdown file in the repo.
 - **prototype**: build a throwaway prototype to answer a design question.
+- **field-onboarding**: guide a researcher step by step into an unfamiliar research field, or decode a paper, abstract, or referee comment they cannot parse; one rung at a time, with a checkpoint before each advance.
 
-wayfinder requires rhizome-mcp (https://github.com/Odrin/rhizome-mcp); the other five do not.
+wayfinder requires rhizome-mcp (https://github.com/Odrin/rhizome-mcp); the others do not.
 
 ## Install
 
-The install, update, and uninstall procedure is in [docs/how-to-install-skills-in-omp.md](docs/how-to-install-skills-in-omp.md), written to be executed by an LLM inside an omp session: point your agent at this repo (a local directory path or a git URL) and ask it to install the six skills, using `omp-skills` as the pack name.
+The install, update, and uninstall procedure is in [docs/how-to-install-skills-in-omp.md](docs/how-to-install-skills-in-omp.md), written to be executed by an LLM inside an omp session: point your agent at this repo (a local directory path or a git URL) and ask it to install the skills, using `omp-skills` as the pack name.
 
 ## Prerequisites
 
